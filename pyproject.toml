@@ -23,6 +23,12 @@ classifiers = [
 ]
 dependencies = []
 
+[project.urls]
+Homepage = "https://github.com/dnega-dev/SourceAdapter-Fuzz"
+Repository = "https://github.com/dnega-dev/SourceAdapter-Fuzz"
+Issues = "https://github.com/dnega-dev/SourceAdapter-Fuzz/issues"
+Changelog = "https://github.com/dnega-dev/SourceAdapter-Fuzz/blob/main/CHANGELOG.md"
+
 [project.scripts]
 source-adapter-fuzz = "source_adapter_fuzz.cli:main"
 
