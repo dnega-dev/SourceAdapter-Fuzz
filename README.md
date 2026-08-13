@@ -1,5 +1,9 @@
 # Source Adapter Fuzz
 
+[![CI](https://github.com/dnega-dev/SourceAdapter-Fuzz/actions/workflows/ci.yml/badge.svg)](https://github.com/dnega-dev/SourceAdapter-Fuzz/actions/workflows/ci.yml)
+[![Python 3.9+](https://img.shields.io/badge/python-3.9%2B-3776AB)](https://www.python.org/)
+[![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
+
 Source Adapter Fuzz is a zero-runtime-dependency Python 3.9+ conformance and
 fault-injection toolkit for public-data acquisition strategies. It provides a
 small adapter protocol, a scored/staggered waterfall engine, deterministic
