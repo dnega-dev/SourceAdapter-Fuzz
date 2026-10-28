@@ -4,6 +4,10 @@ These rules apply to every repository owned by **dnega-dev**, whichever tool is 
 
 - **Canonical source:** `dnega-dev/app-foundry`, the repo that scaffolds new apps. See `standards/STANDARD.md` for the full method, `standards/case-studies/` for worked examples, and `standards/ADOPTION.md` for which repos carry this file.
 - This file is self-contained, so it still works without access to that repo.
+- **Which tools read what:** Codex, Cursor, Windsurf, Cline, Jules, Amp, VS Code agents and Hyperagent read this file directly. The companion files below point here:
+  - `CLAUDE.md` for Claude Code;
+  - `GEMINI.md` for Gemini CLI;
+  - `.github/copilot-instructions.md` for GitHub Copilot.
 - **Project specifics** are at the bottom of this file. Where they conflict with the general rules, the project rules win.
 
 ---
@@ -86,7 +90,8 @@ reproduce → root cause → minimal fix → test → mutation check (fix off = 
   - writes under `.github/workflows/` can return 403;
   - multi-file pushes (git trees) can return 403;
   - reading check runs can return 403.
-  - Instead: write one file at a time; take PR `mergeable_state: "clean"` as "checks passed"; read the host bot's PR comment for preview status.
+  - Instead: write one file at a time, and read the host bot's PR comment for preview status.
+- **If CI results can't be read, report CI as UNKNOWN.** `mergeable_state: "clean"` only means no *required* check is blocking. Optional, skipped and neutral jobs still pass that test, so it doesn't prove the tests ran or passed. Get real evidence: run the suite yourself on the head commit (locally or against the deploy preview) and cite that.
 - **Never commit secrets.** Run a secret scan on changes before pushing.
 
 ## 6. Security and reliability baseline (web projects)
